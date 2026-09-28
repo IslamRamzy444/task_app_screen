@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+import 'package:task_app_screen/config/di/di.dart';
+import 'package:task_app_screen/core/routes/app_routes.dart';
+import 'package:task_app_screen/core/routes/route_generator.dart';
+import 'package:task_app_screen/core/theme/app_theme.dart';
+import 'package:task_app_screen/l10n/app_localizations.dart';
+
+void main() {
+  configureDependencies();
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      onGenerateRoute: RouteGenerator.getRoutes,
+      initialRoute: AppRoutes.tasks,
+      theme: AppTheme.lightTheme,
+      themeMode: ThemeMode.light,
+    );
+  }
+}

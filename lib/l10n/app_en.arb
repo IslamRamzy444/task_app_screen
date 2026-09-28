@@ -1,0 +1,11 @@
+{
+    "my_tasks": "My Tasks",
+    "markAsDone": "Mark as Done",
+    "completed": "Completed",
+    "task1Title": "Design System",
+    "task1Desc": "Finalize the color palette and typography for the new app.",
+    "task2Title": "API Integration",
+    "task2Desc": "Connect the login screen to the Firebase backend.",
+    "task3Title": "User Testing",
+    "task3Desc": "Conduct a usability test with 5 potential users."
+}
